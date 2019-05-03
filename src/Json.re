@@ -45,6 +45,7 @@ let fromValidJson = [%raw
           return a
         }
       }
+      if (o === null) return o;
       throw new Error("Cannot deserialize unidentified object [" + o + "].")
   }
 |}
